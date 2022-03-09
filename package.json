@@ -1,0 +1,28 @@
+{
+  "name": "berenclub-discord-management-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jordeytje/Berenclub-Discord-Management-Bot.git"
+  },
+  "author": "Jordey Knook",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jordeytje/Berenclub-Discord-Management-Bot/issues"
+  },
+  "homepage": "https://github.com/jordeytje/Berenclub-Discord-Management-Bot#readme",
+  "dependencies": {
+    "@discordjs/opus": "^0.6.0",
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "ffmpeg-static": "^4.4.0",
+    "yt-search": "^2.10.1",
+    "ytdl-core": "^4.10.1"
+  }
+}
