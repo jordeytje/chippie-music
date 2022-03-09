@@ -1,4 +1,3 @@
-const { MessageEmbed } = require('discord.js');
 const ytdl = require('ytdl-core');
 const ytSearch = require('yt-search');
 
@@ -81,7 +80,7 @@ module.exports = {
 					videoPlayer(message.guild, queueConstructor.songs[0]);
 				} catch (err) {
 					queue.delete(message.guild.id);
-					message.channel.send('RIP der ging wat fout.');
+					message.channel.send('RIP der ging wat fout, probeer \'t ff opnieuw..');
 					throw err;
 				}
 			} else {
@@ -127,11 +126,8 @@ const stopSong = (message, serverQueue) => {
 	if (!message.member.voice.channel)
 		return message.channel.send('Je moet in een spraakkanaal zitten om dit commando uit te voeren.');
 
-	if (serverQueue) {
-		serverQueue.songs = [];
-
-		skipSong();
-	}
+  serverQueue.songs = []
+  if (serverQueue) serverQueue.connection.dispatcher.end();
 
 	message.channel.send('*De bot is geyeet into oblivion.*');
 };
@@ -143,6 +139,7 @@ const songList = (message, serverQueue) => {
 	if (!serverQueue) return message.channel.send('Er is geen queue.');
 
 	let list = [];
+  
 	serverQueue.songs.forEach((q) => {
 		list.push(`${q.title} - ${q.time}`);
 	});
