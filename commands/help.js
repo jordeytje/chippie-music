@@ -10,8 +10,7 @@ module.exports = {
 		  .setDescription(
 		  	'Onderstaande commando\'s worden uitgevoerd met **een streepje** als **prefix -**\n' +
 		  	'De blokhaken zoals [deze] staan voor argumenten, deze haken moet je niet typen.\n\n' +
-		  	'Je kan gebruik maken van **play** | **p**, **skip** | **s**, **queue** | **q** of **stop**. \n' +
-		  )
+		  	'Je kan gebruik maken van **play** | **p**, **skip** | **s**, **queue** | **q** of **stop**.')
 		  .setFooter('Heb je een idee of toevoeging voor de bot? Let me know.');
 
 		  message.channel.send(embed);
