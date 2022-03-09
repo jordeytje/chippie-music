@@ -126,8 +126,10 @@ const stopSong = (message, serverQueue) => {
 	if (!message.member.voice.channel)
 		return message.channel.send('Je moet in een spraakkanaal zitten om dit commando uit te voeren.');
 
-  serverQueue.songs = []
-  if (serverQueue) serverQueue.connection.dispatcher.end();
+  if (serverQueue) {
+   serverQueue.songs = []
+   serverQueue.connection.dispatcher.end(); 
+  }
 
 	message.channel.send('*De bot is geyeet into oblivion.*');
 };
